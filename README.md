@@ -24,11 +24,9 @@
 - **Backend**:
   - [Firebase](https://firebase.google.com/) - Plataforma de desarrollo de aplicaciones móviles y web.
     - **Firestore**: Base de datos NoSQL para almacenar las notas.
-    - **Authentication** (si lo implementas): Para autenticación de usuarios.
 
 - **Herramientas**:
   - [React](https://reactjs.org/) - Biblioteca para construir interfaces de usuario.
-  - [Vercel](https://vercel.com/) - Plataforma para despliegue de aplicaciones.
 
 ---
 
@@ -132,27 +130,6 @@ Sigue estos pasos para configurar el proyecto en tu máquina local:
 
 ### Eliminar una nota:
 - En la página de edición de una nota, haz clic en "Eliminar".
-
----
-
-## 🙌 Contribuciones
-
-¡Las contribuciones son bienvenidas! Si deseas mejorar el proyecto, sigue estos pasos:
-
-1. Haz un **fork** del repositorio.
-2. Crea una rama con tu nueva funcionalidad:
-   ```bash
-   git checkout -b feature/nueva-funcionalidad
-   ```
-3. Realiza tus cambios y haz **commit**:
-   ```bash
-   git commit -m 'Añade nueva funcionalidad'
-   ```
-4. Sube los cambios a tu repositorio:
-   ```bash
-   git push origin feature/nueva-funcionalidad
-   ```
-5. Abre un **Pull Request** en este repositorio.
 
 ---
 
