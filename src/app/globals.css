@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f0f4f8;
+  --foreground: #000000;
+  --primary: #1a73e8;
+  --secondary: #34a853;
+  --error: #ea4335;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #000000;
+    --primary: #8ab4f8;
+    --secondary: #81c995;
+    --error: #f28b82;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, 'San Francisco', 'Geist', Arial, Helvetica, sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+button {
+  transition: background-color 0.3s, filter 0.3s;
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
