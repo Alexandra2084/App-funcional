@@ -4,7 +4,14 @@ import { NoteForm } from '@/app/components/NoteForm';
 import { getNote, saveNote } from '@/app/lib/db';
 import { Note } from '@/app/lib/db';
 
-export default async function NotePage({ params }: { params: { id: string } }) {
+interface NotePageProps {
+  params: {
+    id: string;
+  };
+}
+
+export default async function NotePage({ params }: NotePageProps) {
+
   const { id } = params;
 
   const note = await getNote(id);
