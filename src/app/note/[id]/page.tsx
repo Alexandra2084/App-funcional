@@ -1,18 +1,10 @@
-// src/app/note/[id]/page.tsx
-
+import { redirect } from 'next/navigation';
 import MainLayout from '@/app/components/MainLayout';
 import { NoteForm } from '@/app/components/NoteForm';
 import { getNote, saveNote } from '@/app/lib/db';
 import { Note } from '@/app/lib/db';
-import { redirect } from 'next/navigation';
 
-interface Props {
-  params: {
-    id: string;
-  };
-}
-
-export default async function NotePage({ params }: Props) {
+export default async function NotePage({ params }: { params: { id: string } }) {
   const { id } = params;
 
   const note = await getNote(id);
@@ -45,7 +37,7 @@ export default async function NotePage({ params }: Props) {
         <NoteForm
           initialData={note}
           onSave={async (updatedNote: Note) => {
-            'use server'; // Requiere configuración extra si vas a usar acciones del lado del servidor
+            'use server'; // Para que Vercel lo reconozca como acción del servidor
             await saveNote(updatedNote);
             redirect('/');
           }}
